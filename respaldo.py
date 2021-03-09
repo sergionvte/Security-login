@@ -1,3 +1,5 @@
+# CÓDIGO RESPALDADO POR MNOTIVOS DE SEGURIDAD
+
 from tkinter import *
 import os
 
@@ -94,24 +96,18 @@ def login():
     global screen2
     screen2 = Toplevel(screen)
     screen2.title("Login")
-    screen2.geometry("550x250")
+    screen2.geometry("300x250")
     Label(screen2, text = "Please enter details for login").pack()
     Label(screen2, text = "").pack()
 
     global username_verify
     global password_verify
-    global student_code_verify
-    global phone_number_verify
     
     username_verify = StringVar()
     password_verify = StringVar()
-    student_code_verify = StringVar()
-    phone_number_verify = StringVar()
     
     global username_entry1
     global password_entry1
-    global student_code_entry1
-    global phone_number_entry1
 
     Label(screen2, text = "Username * ").pack()
     username_entry1 = Entry(screen2, textvariable = username_verify)
@@ -121,15 +117,6 @@ def login():
     password_entry1 = Entry(screen2, textvariable = password_verify)
     password_entry1.pack()
     Label(screen2, text = "").pack()
-    Label(screen2, text = "Student Code * ").pack()
-    student_code_entry1 = Entry(screen2, textvariable = student_code_verify)
-    student_code_entry1.pack()
-    Label(screen2, text = "").pack()
-    Label(screen2, text = "Phone Number * ").pack()
-    phone_number_entry1 = Entry(screen2, textvariable = phone_number_verify)
-    phone_number_entry1.pack()
-
-
     Button(screen2, text = "Login", width = 10, height = 1, command = login_verify).pack()
 
 def main_screen():
