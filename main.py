@@ -62,7 +62,7 @@ def register_user():
     student_code_info = student_code.get()
     phone_number_info = phone_number.get()
 
-    file = open(username_info + ".txt", "w")
+    file = open(username_info + ".sec", "w")
     file.write(username_info + "\n")
     file.write(password_info + "\n")
     file.write(student_code_info + "\n")
@@ -87,8 +87,8 @@ def login_verify():
     phone_number_entry1.delete(0, END)
 
     list_of_files = os.listdir()
-    if username1 + ".txt" in list_of_files:
-        file1 = open(username1 + ".txt", "r")
+    if username1 + ".sec" in list_of_files:
+        file1 = open(username1 + ".sec", "r")
         verify = file1.read().splitlines()
         if password1 in verify:
             if student_code1 in verify:
