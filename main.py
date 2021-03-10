@@ -1,3 +1,6 @@
+# SERGIO NAVARRETE MALDONADO
+# SEGURIDAD DE 4 CAPAS
+# ACTIVIDAD 1.3
 from tkinter import *
 import os
 
